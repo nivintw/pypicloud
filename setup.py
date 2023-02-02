@@ -33,11 +33,11 @@ REQUIREMENTS = [
 
 EXTRAS = {
     "ldap": ["python-ldap"],
-    "dynamo": ["flywheel >= 0.2.0"],
+    "dynamo": ["flywheel>=0.2.0"],
     "redis": ["redis"],
     "gcs": [
         "google-cloud-storage>=1.10.0",
-        "smart_open[gcs]",
+        "smart_open[gcs]>=6.3.0",  # ref #320
     ],
     "azure-blob": [
         "azure-storage-blob>=12.5.0",
@@ -53,7 +53,7 @@ EXTRAS["server"] = ["waitress"]
 if __name__ == "__main__":
     setup(
         name="pypicloud",
-        version="1.3.11",
+        version="1.3.12",
         description="Private PyPI backed by S3",
         long_description=README + "\n\n" + CHANGES,
         classifiers=[
